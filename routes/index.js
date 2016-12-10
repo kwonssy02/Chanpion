@@ -14,4 +14,8 @@ router.get('/constitution', function(req, res, next) {
   res.render('constitution', { title: '찬피온', subtitle: '헌법' });
 });
 
+router.get('/history', function(req, res, next) {
+  res.render('history', { title: '찬피온', subtitle: '역사' });
+});
+
 module.exports = router;
