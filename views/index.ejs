@@ -1,79 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>
-		<%= title %></title>
-
-	<!-- 부트스트랩 -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
-	<script src="/js/bootstrap.min.js"></script>
-</head>
+<%- include header.ejs %>
 
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="/"><%= title %></a>
-			</div>
-			<!--
-			<div id="navbar" class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right">
-					<div class="form-group">
-						<input type="text" placeholder="Email" class="form-control">
-					</div>
-					<div class="form-group">
-						<input type="password" placeholder="Password" class="form-control">
-					</div>
-					<button type="submit" class="btn btn-success">Sign in</button>
-				</form>
-			</div>
-			-->
-			<!--/.navbar-collapse -->
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="navbar">
-				<ul class="nav navbar-nav">
-				  <!-- <li class="active"><a href="#">소개<span class="sr-only">(current)</span></a></li> -->
-				  <li><a href="/members">구성원</a></li>
-				  <li><a href="/constitution">헌법</a></li>
-				  <li><a href="/history">역사</a></li>
-				  
-				</ul>
-				<!--
-				<ul class="nav navbar-nav navbar-right">
-				  <li><a href="#">Link</a></li>
-				  <li class="dropdown">
-				    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-				    <ul class="dropdown-menu">
-				      <li><a href="#">Action</a></li>
-				      <li><a href="#">Another action</a></li>
-				      <li><a href="#">Something else here</a></li>
-				      <li role="separator" class="divider"></li>
-				      <li><a href="#">Separated link</a></li>
-				    </ul>
-				  </li>
-				</ul>
-
-				-->
-			</div><!-- /.navbar-collapse -->
-		</div>
-	</nav>
-
-	<!-- Main jumbotron for a primary marketing message or call to action -->
-
+	<%- include menubar.ejs %>
 	
 	<div class="container" style="margin:0; padding:0; width:100%;">
 		<img class="img-responsive" src="/images/chanpion_assemble.jpg" alt="찬피온 어셈블" style="margin: 0 auto;">
@@ -83,14 +14,9 @@
 		<h2>Hello, Chanpions!</h2>
 		<p>찬피온 사이버 빌리지에 오신 것을 환영합니다.</p>
 		<!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
-
-		<hr>
-
-		<footer>
-			<p>&copy; 찬피온 2016</p>
-		</footer>
 	</div>
-	
+
+	<%- include footer.ejs %>
 <!--
 	<div class="container">
 		<div class="row">
@@ -106,12 +32,9 @@
 				<p>당진수산의 당진네A세트(110,000원) </p>
 				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 			</div>
-			
 		</div>
-
--->
 	</div>
-	
+-->	
 
 </body>
 

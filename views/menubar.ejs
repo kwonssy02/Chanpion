@@ -1,0 +1,76 @@
+<%
+	//메뉴 리스트.. 메뉴 추가하기 위해서는 배열에 추가하기.
+	var menuList = [];
+	menuList.push({page : 'members', pageNm : '구성원'});
+	menuList.push({page : 'constitution', pageNm : '헌법'});
+	menuList.push({page : 'history', pageNm : '역사'});
+%>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/"><%= title %></a>
+		</div>
+		<!--
+		<div id="navbar" class="navbar-collapse collapse">
+			<form class="navbar-form navbar-right">
+				<div class="form-group">
+					<input type="text" placeholder="Email" class="form-control">
+				</div>
+				<div class="form-group">
+					<input type="password" placeholder="Password" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-success">Sign in</button>
+			</form>
+		</div>
+		-->
+		<!--/.navbar-collapse -->
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="nav navbar-nav">
+<%
+	for(var i=0; i<menuList.length; i++) {
+		if(menuList[i].page == currentPage) {
+%>
+				<li class="active"><a href="#"><%= menuList[i].pageNm %><span class="sr-only">(current)</span></a></li>
+<%
+		}else {
+%>
+				<li><a href="/<%= menuList[i].page %>"><%= menuList[i].pageNm %></a></li>
+<%
+		}
+	}
+%>
+			  <!-- <li class="active"><a href="#">소개<span class="sr-only">(current)</span></a></li> -->
+			  <!--
+			  <li><a href="/members">구성원</a></li>
+			  <li><a href="/constitution">헌법</a></li>
+			  <li><a href="/history">역사</a></li>
+			  -->
+			</ul>
+			<!--
+			<ul class="nav navbar-nav navbar-right">
+			  <li><a href="#">Link</a></li>
+			  <li class="dropdown">
+			    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			    <ul class="dropdown-menu">
+			      <li><a href="#">Action</a></li>
+			      <li><a href="#">Another action</a></li>
+			      <li><a href="#">Something else here</a></li>
+			      <li role="separator" class="divider"></li>
+			      <li><a href="#">Separated link</a></li>
+			    </ul>
+			  </li>
+			</ul>
+
+			-->
+		</div><!-- /.navbar-collapse -->
+	</div>
+</nav>
